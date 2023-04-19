@@ -25,8 +25,7 @@ const Home = (props) => {
   } = useContext(store);
 
   useEffect(() => {
-    console.log("store user", userDetail)
-    console.log("local user", userdetail)
+   
     
     if (userDetail !== userdetail) {
       setUserDetail(userDetail);

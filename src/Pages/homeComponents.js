@@ -158,6 +158,19 @@ export const ProfileModal = (props) => {
                 }
                </>
              }
+            
+              {
+            !props.view && <button type="submit" disabled={submitted} className="mt-5 mx-0 w-100" >
+            {submitted ? (
+              <center>
+                <Loader />
+              </center>
+            ) : (
+              "Update"
+            )}
+          </button>
+          }
+             
             </div>
             <div className="dataInput">
               <label>
@@ -175,6 +188,16 @@ export const ProfileModal = (props) => {
                 <input
                   name="last_name"
                   value={profileData.last_name}
+                  onChange={onChange}
+                  disabled={props.view}
+                  required
+                />
+              </label>
+              <label>
+                <span>Contact No</span>
+                <input
+                  name="contact_no"
+                  value={profileData.contact_no}
                   onChange={onChange}
                   disabled={props.view}
                   required
@@ -221,17 +244,7 @@ export const ProfileModal = (props) => {
                   
                 />
               </label>
-              {
-            !props.view && <button type="submit" disabled={submitted}>
-            {submitted ? (
-              <center>
-                <Loader />
-              </center>
-            ) : (
-              "Update"
-            )}
-          </button>
-          }
+             
             </div>
           </div>
        

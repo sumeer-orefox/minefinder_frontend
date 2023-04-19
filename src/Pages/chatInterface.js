@@ -218,7 +218,7 @@ function ChatInterface(props) {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <input type="file" /><img src={menu} alt="file"/>
+       
         <button type="submit">
             <img src={send} alt="send"/>
           </button>
